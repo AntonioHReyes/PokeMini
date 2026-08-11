@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct PokeMiniApp: App {
+    private let dependencies = AppDependencies()
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView(dependencies: dependencies)
         }
     }
 }

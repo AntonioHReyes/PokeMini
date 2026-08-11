@@ -12,7 +12,7 @@ struct GetPokemonListUseCase {
         self.repository = repository
     }
     
-    func execute(limit: Int, offset: Int) async throws -> [Pokemon] {
+    func execute(limit: Int = 20, offset: Int = 0) async throws -> [Pokemon] {
         try await repository.getPokemonList(limit: limit, offset: offset)
     }
 }
